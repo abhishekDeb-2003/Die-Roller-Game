@@ -8,21 +8,36 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/dice_view"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center_horizontal"
-        android:contentDescription="@string/dice_view"
-        android:src="@drawable/empty_dice"
-        tools:src="@drawable/empty_dice" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/dice_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/dice_view"
+            android:visibility="visible"
+            android:src="@drawable/empty_dice"
+            tools:src="@drawable/empty_dice"
+            android:layout_centerInParent="true"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            app:lottie_fileName="roll_die.json"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/roll_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/roll_btn" />
+        android:text="@string/roll_txt" />
 
 
 </LinearLayout>
