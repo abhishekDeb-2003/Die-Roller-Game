@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Die Roller Game</string>
+    <string name="dice_view">dice_view</string>
+    <string name="roll_btn">Roll</string>
+</resources>
